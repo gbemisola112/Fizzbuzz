@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fizzbuzz</title>
+    <link rel="stylesheet" href="fizzbuzz.css">
+</head>
+<body>
+    <center>
+    <div class="fizz">
+    <h2 class="buzz">Fizz buzz</h2>
+    <input type="number" placeholder="fizz buzz" id="a">
+    <button onclick="btn()" id="check">click</button>
+    <div id="show"></div>
+    </div>
+    </center>
+    <script>
+        function btn() {
+            if (a.value %3==0 && a.value %5==0) {
+                show.innerHTML = 'fizzbuzz'
+            } else if (a.value %3==0 ) {
+                show.innerHTML = 'fizz'
+                show.style.color = "green"
+            } else if ( a.value %5==0) {
+                show.innerHTML = 'buzz'
+                show.style.color = "blue"
+            }
+            else{
+                show.innerHTML = 'Invalid'
+                show.style.color = "red"
+            }
+            if(a.value == ""){
+                show.innerHTML = "Enter valid number"
+                show.style.color = "green"
+            }
+        }
+    </script>
+</body>
+</html>
